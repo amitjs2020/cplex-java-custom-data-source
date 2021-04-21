@@ -1,0 +1,48 @@
+<datasource>
+	<!-- The connection string
+		 The default url connects to mysql on default port, using database
+		'custom_data_source'
+	 -->
+	<url>jdbc:sqlserver://localhost:1433;databaseName=ftedb</url>
+	
+	<!-- Your connection credentials -->
+	<user>srvgtnxfterw</user>
+	<password>@lhh$tb*rw</password>
+	
+ 	<read>	
+ 		<!-- <table name="Input" target="Input"/> -->
+		<query name="costData">Select scenariorun_id, spendopti_ilog_supply_lineitem_id, supply_lineitem_id, carrier_id, ilog_demand_lineitem_id, totalprice, allocation from tt_spendopti_ilog_supply_lineitem where scenariorun_id = 33 order by carrier_id</query>
+		<query name="carrierLaneData">select distinct carrier_id, ilog_demand_lineitem_id from tt_spendopti_ilog_supply_lineitem where scenariorun_id = 33 order by carrier_id</query>
+		<query name="groupData">select distinct ilog_group_id as groupID from tl_spendopti_ilog_group_demand_lineitem where scenariorun_id = 33</query>
+		<query name="aGrpData">select distinct spendopti_ilog_carrier_amount_group_id as aGrpID from tt_spendopti_ilog_carrier_amount_group where scenariorun_id = 33</query>
+		<query name="carrierData">Select distinct carrier_id  from tt_spendopti_ilog_supply_lineitem where scenariorun_id = 33</query>
+		<query name="supplyLineItemData">Select distinct spendopti_ilog_supply_lineitem_id from tt_spendopti_ilog_supply_lineitem where scenariorun_id = 33</query>
+		<query name="laneinfoData">Select scenariorun_id, spendopti_ilog_demand_lineitem_id, demand_lineitem_id, estvolume, penaltycost from tt_spendopti_ilog_demand_lineitem where scenariorun_id = 33</query>
+		<query name="grouplaneData">select scenariorun_id, ilog_group_id, ilog_demand_lineitem_id from tl_spendopti_ilog_group_demand_lineitem where scenariorun_id = 33</query>
+		<query name="carrierGroupData">select distinct a.scenariorun_id as scenariorunId, a.carrier_id as carrier_id, b.ilog_group_id as ilog_group_id from tt_spendopti_ilog_supply_lineitem as a, tl_spendopti_ilog_group_demand_lineitem as b where a.ilog_demand_lineitem_id =b.ilog_demand_lineitem_id and a.scenariorun_id=b.scenariorun_id and a.scenariorun_id=33</query>
+		<query name="groupvolumeboundData">select group_id,scenariorun_id,carrier_id,lowerbound_capacity,upperbound_capacity from tt_spendopti_ilog_group_capacity where scenariorun_id = 33</query>
+		<query name="amtGroupBoundData">select spendopti_ilog_carrier_amount_group_id, scenariorun_id, ilog_group_id, minimum_dollar_amount,  maximum_dollar_amount from tt_spendopti_ilog_carrier_amount_group where scenariorun_id = 33</query>
+		<query name="amtGroupCarrierData">select carrier_amount_group_id, scenariorun_id, carrier_id from tt_spendopti_ilog_carrier_group where scenariorun_id = 33</query>
+		<query name="groupcarrierboundData">select minmax_carrier.group_id,	minmax_carrier.min_num,	minmax_carrier.max_num from tt_spendopti_ilog_group as ilog_group, tt_spendopti_ilog_minmax_carrier as minmax_carrier where ilog_group.spendopti_ilog_group_id = minmax_carrier.group_id and ilog_group.scenariorun_id = 33</query>
+		<query name="parameterData">select scenariorun_id, global_min_carrier, global_max_carrier, numberof_carrier_threshold, admin_cost_bellow_threshold, admin_cost_above_threshold, mode, result_parameter, max_run_time from tt_spendopti_ilog_globalparam where scenariorun_id = 33</query>
+		<query name="iCarrierLaneRawData">select distinct carrier_id, spendopti_ilog_demand_lineitem_id from tt_spendopti_ilog_incumbent where max_volume > 0 and scenariorun_id=33</query>
+		<query name="nICarrierLaneRawData">Select distinct a.carrier_id, a.ilog_demand_lineitem_id  from tt_spendopti_ilog_supply_lineitem as a where a.scenariorun_id = 33 and not exists (select distinct b.carrier_id, b.spendopti_ilog_demand_lineitem_id from tt_spendopti_ilog_incumbent as b where b.carrier_id=a.carrier_id and b.spendopti_ilog_demand_lineitem_id = a.ilog_demand_lineitem_id and b.max_volume > 0 and b.scenariorun_id=a.scenariorun_id)</query>
+		<query name="iCarrierLaneVolRawData">select carrier_id, spendopti_ilog_demand_lineitem_id, min_volume, max_volume  from tt_spendopti_ilog_incumbent where max_volume > 0 and scenariorun_id=33</query>
+		<query name="sameProportionGrpData">select distinct group_id  from tt_spendopti_ilog_carrier_levelling_proportional_group where scenariorun_id = 33</query>
+	</read>
+	
+	<!-- The output table mapping.
+		 This mapping define how output data sets are exported to the database.
+	-->
+	<write>
+		<!-- This maps the output dataset "Result" to the "result" table -->
+		<!-- <table name="Result" target="result"/> -->
+		<table name="modeloutputData" target="tt_spendopti_ilog_supply_lineitem"/>
+		<table name="deficitoutputData" target="tt_spendopti_ilog_deficit_allocation"/>
+		<!--
+		<query name="modeloutputData">update tt_spendopti_ilog_supply_lineitem set allocation =? where spendopti_ilog_supply_lineitem_id=?</query>
+		<query name="deficitoutputData">insert into tt_spendopti_ilog_deficit_allocation(scenariorun_id, ilog_demand_lineitem_id, Allocation) Values(?,?,?)</query>
+		-->
+	</write>
+</datasource>
+
