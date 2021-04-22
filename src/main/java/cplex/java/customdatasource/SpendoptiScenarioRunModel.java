@@ -42,13 +42,15 @@ public class SpendoptiScenarioRunModel {
 			// source
 			// and sets the source in OPL.
 			//
+			SpendOptiObjectTransformer spendOptiObjectTransformer = new SpendOptiObjectTransformer();
 			SpendOptiJdbcConfiguration jdbcProperties = null;
 			String jdbcConfigurationFile = cl.getPropertiesFileName();
 			if (jdbcConfigurationFile != null) {
 				jdbcProperties = new SpendOptiJdbcConfiguration();
 				jdbcProperties.read(jdbcConfigurationFile);
 				// Create the custom JDBC data source
-				IloOplDataSource jdbcDataSource = new SpendOptiScenarioCustomDataSource(jdbcProperties, oplF, def);
+				//IloOplDataSource jdbcDataSource = new SpendOptiScenarioCustomDataSource(jdbcProperties, oplF, def);
+				IloOplDataSource jdbcDataSource = new SpendOptiScenarioJSONCustomDataSource(jdbcProperties, oplF, def, spendOptiObjectTransformer);
 				// Pass it to the model.
 				opl.addDataSource(jdbcDataSource);
 			}
@@ -60,6 +62,7 @@ public class SpendoptiScenarioRunModel {
 				opl.printExternalData(ofs);
 				ofs.close();
 			}
+			System.out.println(opl.toString());
 			boolean success = false;
 			if (opl.hasCplex()) {
 				if (opl.getCplex().solve()) {
@@ -74,8 +77,10 @@ public class SpendoptiScenarioRunModel {
 				opl.postProcess();
 				// write results
 				if (jdbcProperties != null) {
-					SpendOptiScenarioJdbcWriter writer = new SpendOptiScenarioJdbcWriter(jdbcProperties, def, opl);
-					writer.customWrite();
+					//SpendOptiScenarioJdbcWriter writer = new SpendOptiScenarioJdbcWriter(jdbcProperties, def, opl);
+					//writer.customWrite();
+					SpendOptiScenarioJSONObjectWriter writer = new SpendOptiScenarioJSONObjectWriter(jdbcProperties, def, opl, spendOptiObjectTransformer);
+					writer.jsonWriter();
 				}
 			}
 			oplF.end();

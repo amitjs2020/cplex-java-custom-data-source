@@ -15,6 +15,7 @@ import cplex.java.customdatasource.model.CarrierData;
 import cplex.java.customdatasource.model.CarrierGroupData;
 import cplex.java.customdatasource.model.CarrierLaneData;
 import cplex.java.customdatasource.model.CostData;
+import cplex.java.customdatasource.model.DeficitoutputData;
 import cplex.java.customdatasource.model.GroupCarrierBoundData;
 import cplex.java.customdatasource.model.GroupData;
 import cplex.java.customdatasource.model.GroupLaneData;
@@ -22,14 +23,17 @@ import cplex.java.customdatasource.model.GroupVolumeBoundData;
 import cplex.java.customdatasource.model.IncumbentCarrierLaneRawData;
 import cplex.java.customdatasource.model.IncumbentCarrierLaneVolumeRawData;
 import cplex.java.customdatasource.model.LaneInfoData;
+import cplex.java.customdatasource.model.ModeloutputData;
 import cplex.java.customdatasource.model.NoIncumbentCarrierLaneRawData;
 import cplex.java.customdatasource.model.ParameterData;
 import cplex.java.customdatasource.model.SameProportionGroupData;
 import cplex.java.customdatasource.model.SupplyLineItemData;
 
 public class SpendOptiILogDAO {
-	
+
 	private static Logger LOG = Logger.getLogger(SpendOptiILogDAO.class.getName());
+
+	private static final int batchSize = 10000;
 
 	private DBConnection dbConnection;
 
@@ -68,6 +72,10 @@ public class SpendOptiILogDAO {
 	private static final String INCUMBENT_CARRIER_LANE_VOL_RAW_DATA_SQL = "select carrier_id, spendopti_ilog_demand_lineitem_id, min_volume, max_volume  from tt_spendopti_ilog_incumbent where max_volume > 0 and scenariorun_id=?";
 
 	private static final String SAME_PROPORTION_GROUP_DATA_SQL = "select distinct group_id  from tt_spendopti_ilog_carrier_levelling_proportional_group where scenariorun_id = ?";
+
+	private static final String UPDATE_MODELOUTPUTDATA = "update tt_spendopti_ilog_supply_lineitem set allocation =? where spendopti_ilog_supply_lineitem_id=?";
+
+	private static final String INSERT_DEFICITOUTPUTDATA = "insert into tt_spendopti_ilog_deficit_allocation(scenariorun_id, ilog_demand_lineitem_id, Allocation) Values(?,?,?)";
 
 	public SpendOptiILogDAO() {
 		this.dbConnection = new DBConnection();
@@ -131,7 +139,8 @@ public class SpendOptiILogDAO {
 				carrierLaneData.setIlogDemandLineitemId(rs.getInt("ilog_demand_lineitem_id"));
 				carrierLaneDatas.add(carrierLaneData);
 			}
-			LOG.log(Level.INFO, "getCarrierLaneData():: SQL: " + CARRIER_LANE_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO,
+					"getCarrierLaneData():: SQL: " + CARRIER_LANE_DATA_SQL + " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -206,7 +215,8 @@ public class SpendOptiILogDAO {
 				amountGroupData.setIlogCarrierAmountGroupId(rs.getInt("aGrpID"));
 				amountGroupDatas.add(amountGroupData);
 			}
-			LOG.log(Level.INFO, "getAmountGroupData():: SQL: " + AMOUNT_GROUP_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO,
+					"getAmountGroupData():: SQL: " + AMOUNT_GROUP_DATA_SQL + " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -282,7 +292,8 @@ public class SpendOptiILogDAO {
 				supplyLineItemData.setSupplyLineitemId(rs.getInt("spendopti_ilog_supply_lineitem_id"));
 				supplyLineItemDatas.add(supplyLineItemData);
 			}
-			LOG.log(Level.INFO, "getSupplyLineItemData():: SQL: " + SUPPLY_LINEITEM_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO,
+					"getSupplyLineItemData():: SQL: " + SUPPLY_LINEITEM_DATA_SQL + " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -402,7 +413,8 @@ public class SpendOptiILogDAO {
 				carrierGroupData.setScenariorunId(rs.getInt("scenariorunId"));
 				carrierGroupDatas.add(carrierGroupData);
 			}
-			LOG.log(Level.INFO, "getCarrierGroupData():: SQL: " + CARRIER_GROUP_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO,
+					"getCarrierGroupData():: SQL: " + CARRIER_GROUP_DATA_SQL + " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -443,7 +455,8 @@ public class SpendOptiILogDAO {
 				groupVolumeBoundData.setUpperBoundCapacity(rs.getFloat("upperbound_capacity"));
 				groupVolumeBoundDatas.add(groupVolumeBoundData);
 			}
-			LOG.log(Level.INFO, "getGroupVolumeBoundData():: SQL: " + GROUP_VOLUME_BOUND_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getGroupVolumeBoundData():: SQL: " + GROUP_VOLUME_BOUND_DATA_SQL + " scenarioRunId "
+					+ scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -484,7 +497,8 @@ public class SpendOptiILogDAO {
 				amountGroupBoundData.setScenariorunId(rs.getInt("scenariorun_id"));
 				amountGroupBoundDatas.add(amountGroupBoundData);
 			}
-			LOG.log(Level.INFO, "getAmountGroupBoundData():: SQL: " + AMOUNT_GROUP_BOUND_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getAmountGroupBoundData():: SQL: " + AMOUNT_GROUP_BOUND_DATA_SQL + " scenarioRunId "
+					+ scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -523,7 +537,8 @@ public class SpendOptiILogDAO {
 				amountGroupCarrierData.setScenariorunId(rs.getInt("scenariorun_id"));
 				amountGroupCarrierDatas.add(amountGroupCarrierData);
 			}
-			LOG.log(Level.INFO, "getAmountGroupCarrierData():: SQL: " + AMOUNT_GROUP_CARRIER_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getAmountGroupCarrierData():: SQL: " + AMOUNT_GROUP_CARRIER_DATA_SQL
+					+ " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -562,7 +577,8 @@ public class SpendOptiILogDAO {
 				groupCarrierBoundData.setMinNum(rs.getInt("max_num"));
 				groupCarrierBoundDatas.add(groupCarrierBoundData);
 			}
-			LOG.log(Level.INFO, "getGroupCarrierBoundData():: SQL: " + GROUP_CARRIER_BOUND_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getGroupCarrierBoundData():: SQL: " + GROUP_CARRIER_BOUND_DATA_SQL + " scenarioRunId "
+					+ scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -598,9 +614,9 @@ public class SpendOptiILogDAO {
 			while (rs.next()) {
 				ParameterData parameterData = new ParameterData();
 				parameterData.setAdminCostAboveThreshold(rs.getFloat("admin_cost_above_threshold"));
-				parameterData.setAdminCostBellowThreshold(rs.getFloat("admin_cost_bellow_threshold"));
+				parameterData.setAdminCostBellowThreshold(rs.getInt("admin_cost_bellow_threshold"));
 				parameterData.setGlobalMaxCarrier(rs.getInt("global_max_carrier"));
-				parameterData.setGlobalMinCarrier(rs.getInt(rs.getInt("global_min_carrier")));
+				parameterData.setGlobalMinCarrier(rs.getInt("global_min_carrier"));
 				parameterData.setMaxRunTime(rs.getInt("max_run_time"));
 				parameterData.setMode(rs.getInt("mode"));
 				parameterData.setNumberofCarrierThreshold(rs.getInt("numberof_carrier_threshold"));
@@ -646,7 +662,8 @@ public class SpendOptiILogDAO {
 				incumbentCarrierLaneRawData.setIncumbentCarrierId(rs.getInt("carrier_id"));
 				incumbentCarrierLaneRawDatas.add(incumbentCarrierLaneRawData);
 			}
-			LOG.log(Level.INFO, "getIncumbentCarrierLaneRawData():: SQL: " + INCUMBENT_CARRIER_LANE_RAW_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getIncumbentCarrierLaneRawData():: SQL: " + INCUMBENT_CARRIER_LANE_RAW_DATA_SQL
+					+ " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -684,7 +701,8 @@ public class SpendOptiILogDAO {
 				noIncumbentCarrierLaneRawData.setNoIncumbentCarrierId(rs.getInt("carrier_id"));
 				noIncumbentCarrierLaneRawDatas.add(noIncumbentCarrierLaneRawData);
 			}
-			LOG.log(Level.INFO, "getNoIncumbentCarrierLaneRawData():: SQL: " + NO_INCUMBERNT_CARRIER_LANE_RAW_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getNoIncumbentCarrierLaneRawData():: SQL: " + NO_INCUMBERNT_CARRIER_LANE_RAW_DATA_SQL
+					+ " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -725,7 +743,8 @@ public class SpendOptiILogDAO {
 				incumbentCarrierLaneVolumeRawData.setMinVolume(rs.getFloat("min_volume"));
 				incumbentCarrierLaneVolumeRawDatas.add(incumbentCarrierLaneVolumeRawData);
 			}
-			LOG.log(Level.INFO, "getIncumbentCarrierLaneVolumeRawData():: SQL: " + INCUMBENT_CARRIER_LANE_VOL_RAW_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getIncumbentCarrierLaneVolumeRawData():: SQL: "
+					+ INCUMBENT_CARRIER_LANE_VOL_RAW_DATA_SQL + " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -762,7 +781,8 @@ public class SpendOptiILogDAO {
 				sameProportionGroupData.setGroupId(rs.getInt("group_id"));
 				sameProportionGroupDatas.add(sameProportionGroupData);
 			}
-			LOG.log(Level.INFO, "getSameProportionGroupData():: SQL: " + SAME_PROPORTION_GROUP_DATA_SQL + " scenarioRunId " + scenarioRunId);
+			LOG.log(Level.INFO, "getSameProportionGroupData():: SQL: " + SAME_PROPORTION_GROUP_DATA_SQL
+					+ " scenarioRunId " + scenarioRunId);
 		} catch (Exception sqlException) {
 			sqlException.printStackTrace();
 		} finally {
@@ -781,6 +801,94 @@ public class SpendOptiILogDAO {
 			}
 		}
 		return sameProportionGroupDatas;
+	}
+
+	public void updateModeloutputData(List<ModeloutputData> modeloutputDatas) {
+		Connection connection = dbConnection.getDbConnection();
+		PreparedStatement prepareStmt = null;
+		ResultSet rs = null;
+		try {
+			connection.setAutoCommit(false);
+			prepareStmt = connection.prepareStatement(UPDATE_MODELOUTPUTDATA);
+			long count = 1;
+			for (ModeloutputData modeloutputData : modeloutputDatas) {
+				int parameterIndex = 1;
+				prepareStmt.setFloat(parameterIndex++, modeloutputData.getAllocation());
+				prepareStmt.setInt(parameterIndex++, modeloutputData.getIlogSupplyLineitemId());
+				prepareStmt.addBatch();
+				if ((count % batchSize) == 0) {
+					prepareStmt.executeBatch();
+				}
+				count++;
+			}
+			// flush batches if any
+			if (batchSize != 0) {
+				prepareStmt.executeBatch();
+			}
+			connection.commit();
+			prepareStmt.execute();
+			LOG.log(Level.INFO, "updateModeloutputData():: SQL: " + UPDATE_MODELOUTPUTDATA);
+		} catch (Exception sqlException) {
+			sqlException.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (prepareStmt != null) {
+					prepareStmt.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (Exception sqlException) {
+				sqlException.printStackTrace();
+			}
+		}
+	}
+
+	public void insertModeloutputData(List<DeficitoutputData> deficitoutputDatas) {
+		Connection connection = dbConnection.getDbConnection();
+		PreparedStatement prepareStmt = null;
+		ResultSet rs = null;
+		try {
+			connection.setAutoCommit(false);
+			prepareStmt = connection.prepareStatement(INSERT_DEFICITOUTPUTDATA);
+			long count = 1;
+			for (DeficitoutputData deficitoutputData : deficitoutputDatas) {
+				int parameterIndex = 1;
+				prepareStmt.setInt(parameterIndex++, deficitoutputData.getScenarioId());
+				prepareStmt.setInt(parameterIndex++, deficitoutputData.getIlogDemandLineitemId());
+				prepareStmt.setFloat(parameterIndex++, deficitoutputData.getAllocation());
+				prepareStmt.addBatch();
+				if ((count % batchSize) == 0) {
+					prepareStmt.executeBatch();
+				}
+				count++;
+			}
+			// flush batches if any
+			if (batchSize != 0) {
+				prepareStmt.executeBatch();
+			}
+			connection.commit();
+			LOG.log(Level.INFO, "insertModeloutputData():: SQL: " + UPDATE_MODELOUTPUTDATA);
+		} catch (Exception sqlException) {
+			sqlException.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (prepareStmt != null) {
+					prepareStmt.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (Exception sqlException) {
+				sqlException.printStackTrace();
+			}
+		}
 	}
 
 }

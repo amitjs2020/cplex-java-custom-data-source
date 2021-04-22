@@ -23,29 +23,36 @@ import org.xml.sax.SAXException;
  */
 public class SpendOptiJdbcConfiguration {
 
-	private static Map<String, String> dataMapping = new HashMap<>();
+	private static Map<String, String[]> inputDataMapping = new HashMap<>();
+	private static Map<String, String[]> outputDataMapping = new HashMap<>();
 
 	static {
-		dataMapping.put("costData", "costData.json");
-		dataMapping.put("carrierLaneData", "carrierLaneData.json");
-		dataMapping.put("groupData", "groupData.json");
-		dataMapping.put("aGrpData", "aGrpData.json");
-		dataMapping.put("carrierData", "carrierData.json");
-		dataMapping.put("supplyLineItemData", "supplyLineItemData.json");
-		dataMapping.put("laneinfoData", "laneinfoData.json");
-		dataMapping.put("grouplaneData", "grouplaneData.json");
-		dataMapping.put("carrierGroupData", "carrierGroupData.json");
-		dataMapping.put("groupvolumeboundData", "groupvolumeboundData.json");
-		dataMapping.put("amtGroupBoundData", "amtGroupBoundData.json");
-		dataMapping.put("amtGroupCarrierData", "amtGroupCarrierData.json");
-		dataMapping.put("groupcarrierboundData", "groupcarrierboundData.json");
-		dataMapping.put("parameterData", "parameterData.json");
-		dataMapping.put("iCarrierLaneRawData", "iCarrierLaneRawData.json");
-		dataMapping.put("nICarrierLaneRawData", "nICarrierLaneRawData.json");
-		dataMapping.put("iCarrierLaneVolRawData", "iCarrierLaneVolRawData.json");
-		dataMapping.put("sameProportionGrpData", "sameProportionGrpData.json");
+		inputDataMapping.put("costData", new String[] {"scenariorun_id","spendopti_ilog_supply_lineitem_id","supply_lineitem_id","carrier_id","ilog_demand_lineitem_id","totalprice", "allocation"});
+		inputDataMapping.put("carrierLaneData", new String[] {"carrier_id","spendopti_ilog_demand_lineitem_id"});
+		inputDataMapping.put("groupData", new String[] {"groupID"});
+		inputDataMapping.put("aGrpData", new String[] {"aGroupID"});
+		inputDataMapping.put("carrierData", new String[] {"carrierID"});
+		inputDataMapping.put("supplyLineItemData", new String[] {"supplyLineItemID"});
+		inputDataMapping.put("laneinfoData", new String[] {"scenariorun_id", "spendopti_ilog_demand_lineitem_id", "demand_lineitem_id", "estvolume", "penaltycost"});
+		inputDataMapping.put("grouplaneData", new String[] {"scenariorun_id", "ilog_group_id", "ilog_demand_lineitem_id"});
+		inputDataMapping.put("carrierGroupData", new String[] {"scenariorunid", "carrier_id", "group_id"});
+		inputDataMapping.put("groupvolumeboundData", new String[] {"group_id", "scenariorun_id", "carrier_id", "lowerbound_capacity",  "upperbound_capacity"});
+		inputDataMapping.put("amtGroupBoundData", new String[] {"amtGroup_id","scenariorun_id", "group_id", "amtLowerbound", "amtUpperbound"});
+		inputDataMapping.put("amtGroupCarrierData", new String[] {"amtGroup_id", "scenariorun_id", "carrier_id"});
+		inputDataMapping.put("groupcarrierboundData", new String[] {"group_id", "min_num", "max_num"});
+		inputDataMapping.put("parameterData", new String[] {"scenariorun_id", "global_min_carrier", "global_max_carrier", "numberof_carrier_threshold", "admin_cost_bellow_threshold", "admin_cost_above_threshold", "mode", "result_parameter", "max_run_time"});
+		inputDataMapping.put("iCarrierLaneRawData", new String[] {"iCarrier_id", "spendopti_ilog_demand_lineitem_id"});
+		inputDataMapping.put("nICarrierLaneRawData", new String[] {"nICarrier_id", "ilog_demand_lineitem_id"});
+		inputDataMapping.put("iCarrierLaneVolRawData", new String[] {"carrier_id","spendopti_ilog_demand_lineitem_id", "min_volume", "max_volume"});
+		inputDataMapping.put("sameProportionGrpData", new String[] {"group_id"}); // TODO verify it
+	}
+	
+	static {
+		outputDataMapping.put("modeloutputData", new String[] {"allocation","spendopti_ilog_supply_lineitem_id"});
+		outputDataMapping.put("deficitoutputData", new String[] {"scenario_id","ilog_demand_lineitem_id", "Allocation"});
 	}
 
+	
 	Properties readProperties = new Properties();
 
 	public static class OutputParameters {
@@ -137,6 +144,14 @@ public class SpendOptiJdbcConfiguration {
 
 	public Properties getReadQueries() {
 		return readProperties;
+	}
+	
+	public Map<String, String[]> getInputDataMapping(){
+		return inputDataMapping;
+	}
+	
+	public Map<String, String[]> getOutputDataMapping(){
+		return outputDataMapping;
 	}
 
 	/**

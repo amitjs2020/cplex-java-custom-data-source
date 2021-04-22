@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 
 import cplex.java.customdatasource.dao.SpendOptiILogDAO;
 import cplex.java.customdatasource.model.CostData;
@@ -37,7 +38,7 @@ public class SpendOptiObjectTransformer {
 
 	}
 
-	public void spendoptiJavaToJsonObjectCreator() {
+	public void createSpendoptiModelRequest(String fileName) {
 		int scenarioRunId = 33;
 		SpendoptiModelRequest spendoptiModelRequest = new SpendoptiModelRequest();
 		SpendOptiILogDAO spendOptiDao = new SpendOptiILogDAO();
@@ -67,17 +68,22 @@ public class SpendOptiObjectTransformer {
 		spendoptiModelRequest
 				.setIncumbentCarrierLaneVolRawData(spendOptiDao.getIncumbentCarrierLaneVolumeRawData(scenarioRunId));
 		spendoptiModelRequest.setSameProportionGroupData(spendOptiDao.getSameProportionGroupData(scenarioRunId));
-			try {
-				mapper.writeValue(new File("spendoptiModelRequest.json"), spendoptiModelRequest);
-				System.out.println(mapper.writeValueAsString(spendoptiModelRequest));
-			} catch (JsonGenerationException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		
+		spendoptiJavaToJsonObjectCreator(fileName, spendoptiModelRequest);
+	}
+	
+	public void spendoptiJavaToJsonObjectCreator(String fileName, Object spendoptiModelRequest) {
+		try {
+			mapper.writeValue(new File(fileName), spendoptiModelRequest);
+			System.out.println(mapper.writeValueAsString(spendoptiModelRequest));
+		} catch (JsonGenerationException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
-	public SpendoptiModelRequest spendoptiJsonToJavaObjectCreator() {
+	public Object spendoptiJsonToJavaObjectCreator() {
 		SpendoptiModelRequest spendoptiModelRequest = null;
 		try {
 			spendoptiModelRequest = mapper.readValue(new File("spendoptiModelRequest.json"), SpendoptiModelRequest.class);
@@ -87,10 +93,21 @@ public class SpendOptiObjectTransformer {
 		return spendoptiModelRequest;
 	}
 	
+	public <T> T spendoptiJsonToJavaObjectCreator(String name, TypeReference<T> typeReference) {
+		T t = null;
+		try {
+			t = mapper.readValue(new File(name), typeReference);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return t;
+	}
+	
 	public static void main(String[] args) {
 		SpendOptiObjectTransformer objectTransformer = new SpendOptiObjectTransformer();
-		objectTransformer.spendoptiJavaToJsonObjectCreator();
-		SpendoptiModelRequest spendoptiModelRequest = objectTransformer.spendoptiJsonToJavaObjectCreator();
+		String inputFileName = "spendoptiModelRequest.json";
+		objectTransformer.createSpendoptiModelRequest(inputFileName);
+		SpendoptiModelRequest spendoptiModelRequest = (SpendoptiModelRequest) objectTransformer.spendoptiJsonToJavaObjectCreator();
 		System.out.println("Scenario Run ID: " + spendoptiModelRequest.getScenarioRuns().get(0).getScenarioRunId());
 		
 		System.out.println("Cost Delta");

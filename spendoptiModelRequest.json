@@ -1201,7 +1201,7 @@
 	"parameterData": [
 		{
 			"scenariorunId": 33,
-			"globalMinCarrier": 33,
+			"globalMinCarrier": 1,
 			"globalMaxCarrier": 1,
 			"numberofCarrierThreshold": 0,
 			"adminCostBellowThreshold": 0.0,
