@@ -22,6 +22,30 @@ import org.xml.sax.SAXException;
  * The class to store JDBC custom data source connection parameters.
  */
 public class SpendOptiJdbcConfiguration {
+
+	private static Map<String, String> dataMapping = new HashMap<>();
+
+	static {
+		dataMapping.put("costData", "costData.json");
+		dataMapping.put("carrierLaneData", "carrierLaneData.json");
+		dataMapping.put("groupData", "groupData.json");
+		dataMapping.put("aGrpData", "aGrpData.json");
+		dataMapping.put("carrierData", "carrierData.json");
+		dataMapping.put("supplyLineItemData", "supplyLineItemData.json");
+		dataMapping.put("laneinfoData", "laneinfoData.json");
+		dataMapping.put("grouplaneData", "grouplaneData.json");
+		dataMapping.put("carrierGroupData", "carrierGroupData.json");
+		dataMapping.put("groupvolumeboundData", "groupvolumeboundData.json");
+		dataMapping.put("amtGroupBoundData", "amtGroupBoundData.json");
+		dataMapping.put("amtGroupCarrierData", "amtGroupCarrierData.json");
+		dataMapping.put("groupcarrierboundData", "groupcarrierboundData.json");
+		dataMapping.put("parameterData", "parameterData.json");
+		dataMapping.put("iCarrierLaneRawData", "iCarrierLaneRawData.json");
+		dataMapping.put("nICarrierLaneRawData", "nICarrierLaneRawData.json");
+		dataMapping.put("iCarrierLaneVolRawData", "iCarrierLaneVolRawData.json");
+		dataMapping.put("sameProportionGrpData", "sameProportionGrpData.json");
+	}
+
 	Properties readProperties = new Properties();
 
 	public static class OutputParameters {

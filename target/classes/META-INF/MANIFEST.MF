@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: akjain
+Specification-Vendor: IBM
+Specification-Title: JDBC custom data source for OPL
+Build-Jdk: 1.8.0_151
+Created-By: Maven Integration for Eclipse
+Specification-Version: 0.0.1-SNAPSHOT
+

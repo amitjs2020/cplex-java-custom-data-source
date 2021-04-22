@@ -1,0 +1,1423 @@
+{
+	"scenarioRuns": [
+		{
+			"scenarioRunId": 31
+		}
+	],
+	"costData": [
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 107,
+			"supplyLineitemId": 407,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 105,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 108,
+			"supplyLineitemId": 408,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 106,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 109,
+			"supplyLineitemId": 409,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 107,
+			"totalPrice": 9.4787,
+			"allocation": 126.6
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 110,
+			"supplyLineitemId": 410,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 108,
+			"totalPrice": 8.316,
+			"allocation": 144.3
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 111,
+			"supplyLineitemId": 411,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 109,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 112,
+			"supplyLineitemId": 412,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 110,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 113,
+			"supplyLineitemId": 413,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 111,
+			"totalPrice": 9.4787,
+			"allocation": 126.6
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 114,
+			"supplyLineitemId": 418,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 112,
+			"totalPrice": 8.316,
+			"allocation": 144.3
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 115,
+			"supplyLineitemId": 419,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 113,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 116,
+			"supplyLineitemId": 420,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 114,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 117,
+			"supplyLineitemId": 421,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 115,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 118,
+			"supplyLineitemId": 422,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 116,
+			"totalPrice": 9.4787,
+			"allocation": 126.6
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 119,
+			"supplyLineitemId": 424,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 117,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 120,
+			"supplyLineitemId": 425,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 118,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 121,
+			"supplyLineitemId": 426,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 119,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 122,
+			"supplyLineitemId": 427,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 120,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 123,
+			"supplyLineitemId": 423,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 121,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 124,
+			"supplyLineitemId": 414,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 122,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 125,
+			"supplyLineitemId": 415,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 123,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 126,
+			"supplyLineitemId": 416,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 124,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 127,
+			"supplyLineitemId": 417,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 125,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 128,
+			"supplyLineitemId": 428,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 126,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 129,
+			"supplyLineitemId": 429,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 127,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 130,
+			"supplyLineitemId": 430,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 128,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 131,
+			"supplyLineitemId": 380,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 129,
+			"totalPrice": 24.0,
+			"allocation": 5.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 132,
+			"supplyLineitemId": 381,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 130,
+			"totalPrice": 12.0,
+			"allocation": 10.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 133,
+			"supplyLineitemId": 382,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 131,
+			"totalPrice": 24.0,
+			"allocation": 5.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 134,
+			"supplyLineitemId": 383,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 132,
+			"totalPrice": 12.0,
+			"allocation": 10.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 135,
+			"supplyLineitemId": 384,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 133,
+			"totalPrice": 9.4787,
+			"allocation": 12.66
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 136,
+			"supplyLineitemId": 385,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 134,
+			"totalPrice": 8.316,
+			"allocation": 144.3
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 137,
+			"supplyLineitemId": 386,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 135,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 138,
+			"supplyLineitemId": 387,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 136,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 139,
+			"supplyLineitemId": 388,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 137,
+			"totalPrice": 9.4787,
+			"allocation": 126.6
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 140,
+			"supplyLineitemId": 393,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 138,
+			"totalPrice": 8.316,
+			"allocation": 144.3
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 141,
+			"supplyLineitemId": 394,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 139,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 142,
+			"supplyLineitemId": 396,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 140,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 143,
+			"supplyLineitemId": 397,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 141,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 144,
+			"supplyLineitemId": 398,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 142,
+			"totalPrice": 9.4787,
+			"allocation": 126.6
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 145,
+			"supplyLineitemId": 400,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 143,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 146,
+			"supplyLineitemId": 395,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 144,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 147,
+			"supplyLineitemId": 401,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 145,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 148,
+			"supplyLineitemId": 402,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 146,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 149,
+			"supplyLineitemId": 403,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 147,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 150,
+			"supplyLineitemId": 399,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 148,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 151,
+			"supplyLineitemId": 389,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 149,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 152,
+			"supplyLineitemId": 390,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 150,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 153,
+			"supplyLineitemId": 391,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 151,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 154,
+			"supplyLineitemId": 392,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 152,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 155,
+			"supplyLineitemId": 404,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 153,
+			"totalPrice": 24.0,
+			"allocation": 50.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 156,
+			"supplyLineitemId": 405,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 154,
+			"totalPrice": 12.0,
+			"allocation": 100.0
+		},
+		{
+			"scenariorunId": 33,
+			"spendoptiIlogSupplyLineitemId": 157,
+			"supplyLineitemId": 406,
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 155,
+			"totalPrice": 10.6667,
+			"allocation": 112.5
+		}
+	],
+	"carrierLaneData": [
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 105
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 106
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 107
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 108
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 109
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 110
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 111
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 112
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 113
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 114
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 115
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 116
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 117
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 118
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 119
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 120
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 121
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 122
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 123
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 124
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 125
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 126
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 127
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 128
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 129
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 130
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 131
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 132
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 133
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 134
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 135
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 136
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 137
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 138
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 139
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 140
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 141
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 142
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 143
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 144
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 145
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 146
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 147
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 148
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 149
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 150
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 151
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 152
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 153
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 154
+		},
+		{
+			"carrierId": 1012,
+			"ilogDemandLineitemId": 155
+		}
+	],
+	"groupData": [],
+	"amountGroupData": [],
+	"carrierData": [
+		{
+			"carrierId": 1012
+		}
+	],
+	"supplyLineItemData": [
+		{
+			"supplyLineitemId": 107
+		},
+		{
+			"supplyLineitemId": 108
+		},
+		{
+			"supplyLineitemId": 109
+		},
+		{
+			"supplyLineitemId": 110
+		},
+		{
+			"supplyLineitemId": 111
+		},
+		{
+			"supplyLineitemId": 112
+		},
+		{
+			"supplyLineitemId": 113
+		},
+		{
+			"supplyLineitemId": 114
+		},
+		{
+			"supplyLineitemId": 115
+		},
+		{
+			"supplyLineitemId": 116
+		},
+		{
+			"supplyLineitemId": 117
+		},
+		{
+			"supplyLineitemId": 118
+		},
+		{
+			"supplyLineitemId": 119
+		},
+		{
+			"supplyLineitemId": 120
+		},
+		{
+			"supplyLineitemId": 121
+		},
+		{
+			"supplyLineitemId": 122
+		},
+		{
+			"supplyLineitemId": 123
+		},
+		{
+			"supplyLineitemId": 124
+		},
+		{
+			"supplyLineitemId": 125
+		},
+		{
+			"supplyLineitemId": 126
+		},
+		{
+			"supplyLineitemId": 127
+		},
+		{
+			"supplyLineitemId": 128
+		},
+		{
+			"supplyLineitemId": 129
+		},
+		{
+			"supplyLineitemId": 130
+		},
+		{
+			"supplyLineitemId": 131
+		},
+		{
+			"supplyLineitemId": 132
+		},
+		{
+			"supplyLineitemId": 133
+		},
+		{
+			"supplyLineitemId": 134
+		},
+		{
+			"supplyLineitemId": 135
+		},
+		{
+			"supplyLineitemId": 136
+		},
+		{
+			"supplyLineitemId": 137
+		},
+		{
+			"supplyLineitemId": 138
+		},
+		{
+			"supplyLineitemId": 139
+		},
+		{
+			"supplyLineitemId": 140
+		},
+		{
+			"supplyLineitemId": 141
+		},
+		{
+			"supplyLineitemId": 142
+		},
+		{
+			"supplyLineitemId": 143
+		},
+		{
+			"supplyLineitemId": 144
+		},
+		{
+			"supplyLineitemId": 145
+		},
+		{
+			"supplyLineitemId": 146
+		},
+		{
+			"supplyLineitemId": 147
+		},
+		{
+			"supplyLineitemId": 148
+		},
+		{
+			"supplyLineitemId": 149
+		},
+		{
+			"supplyLineitemId": 150
+		},
+		{
+			"supplyLineitemId": 151
+		},
+		{
+			"supplyLineitemId": 152
+		},
+		{
+			"supplyLineitemId": 153
+		},
+		{
+			"supplyLineitemId": 154
+		},
+		{
+			"supplyLineitemId": 155
+		},
+		{
+			"supplyLineitemId": 156
+		},
+		{
+			"supplyLineitemId": 157
+		}
+	],
+	"laneInfoData": [
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 105,
+			"demandLineitemId": 503,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 106,
+			"demandLineitemId": 504,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 107,
+			"demandLineitemId": 505,
+			"estVolume": 126.6,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 108,
+			"demandLineitemId": 506,
+			"estVolume": 144.3,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 109,
+			"demandLineitemId": 507,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 110,
+			"demandLineitemId": 508,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 111,
+			"demandLineitemId": 509,
+			"estVolume": 126.6,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 112,
+			"demandLineitemId": 510,
+			"estVolume": 144.3,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 113,
+			"demandLineitemId": 511,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 114,
+			"demandLineitemId": 512,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 115,
+			"demandLineitemId": 513,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 116,
+			"demandLineitemId": 514,
+			"estVolume": 126.6,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 117,
+			"demandLineitemId": 515,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 118,
+			"demandLineitemId": 516,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 119,
+			"demandLineitemId": 517,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 120,
+			"demandLineitemId": 518,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 121,
+			"demandLineitemId": 519,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 122,
+			"demandLineitemId": 520,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 123,
+			"demandLineitemId": 521,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 124,
+			"demandLineitemId": 522,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 125,
+			"demandLineitemId": 523,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 126,
+			"demandLineitemId": 524,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 127,
+			"demandLineitemId": 525,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 128,
+			"demandLineitemId": 526,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 129,
+			"demandLineitemId": 527,
+			"estVolume": 5.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 130,
+			"demandLineitemId": 528,
+			"estVolume": 10.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 131,
+			"demandLineitemId": 529,
+			"estVolume": 5.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 132,
+			"demandLineitemId": 530,
+			"estVolume": 10.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 133,
+			"demandLineitemId": 531,
+			"estVolume": 12.66,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 134,
+			"demandLineitemId": 532,
+			"estVolume": 144.3,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 135,
+			"demandLineitemId": 533,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 136,
+			"demandLineitemId": 534,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 137,
+			"demandLineitemId": 535,
+			"estVolume": 126.6,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 138,
+			"demandLineitemId": 536,
+			"estVolume": 144.3,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 139,
+			"demandLineitemId": 537,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 140,
+			"demandLineitemId": 538,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 141,
+			"demandLineitemId": 539,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 142,
+			"demandLineitemId": 540,
+			"estVolume": 126.6,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 143,
+			"demandLineitemId": 541,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 144,
+			"demandLineitemId": 542,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 145,
+			"demandLineitemId": 543,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 146,
+			"demandLineitemId": 544,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 147,
+			"demandLineitemId": 545,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 148,
+			"demandLineitemId": 546,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 149,
+			"demandLineitemId": 547,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 150,
+			"demandLineitemId": 548,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 151,
+			"demandLineitemId": 549,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 152,
+			"demandLineitemId": 550,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 153,
+			"demandLineitemId": 551,
+			"estVolume": 50.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 154,
+			"demandLineitemId": 552,
+			"estVolume": 100.0,
+			"penaltyCost": 0.0
+		},
+		{
+			"scenariorunId": 33,
+			"ilogDemandLineitemId": 155,
+			"demandLineitemId": 553,
+			"estVolume": 112.5,
+			"penaltyCost": 0.0
+		}
+	],
+	"groupLaneData": [],
+	"carrierGroupData": [],
+	"groupVolumeBoundData": [],
+	"amountGroupBoundData": [],
+	"amountGroupCarrierData": [],
+	"groupCarrierBoundData": [],
+	"parameterData": [
+		{
+			"scenariorunId": 33,
+			"globalMinCarrier": 33,
+			"globalMaxCarrier": 1,
+			"numberofCarrierThreshold": 0,
+			"adminCostBellowThreshold": 0.0,
+			"adminCostAboveThreshold": 0.0,
+			"mode": 1,
+			"resultParameter": 0,
+			"maxRunTime": 0
+		}
+	],
+	"incumbentCarrierLaneRawData": [],
+	"noIncumbentCarrierLaneRawData": [
+		{
+			"ilogDemandLineitemId": 105,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 106,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 107,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 108,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 109,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 110,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 111,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 112,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 113,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 114,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 115,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 116,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 117,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 118,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 119,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 120,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 121,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 122,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 123,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 124,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 125,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 126,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 127,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 128,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 129,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 130,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 131,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 132,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 133,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 134,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 135,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 136,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 137,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 138,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 139,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 140,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 141,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 142,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 143,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 144,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 145,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 146,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 147,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 148,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 149,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 150,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 151,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 152,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 153,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 154,
+			"noIncumbentCarrierId": 1012
+		},
+		{
+			"ilogDemandLineitemId": 155,
+			"noIncumbentCarrierId": 1012
+		}
+	],
+	"incumbentCarrierLaneVolmeRawData": [],
+	"sameProportionGroupData": []
+}
